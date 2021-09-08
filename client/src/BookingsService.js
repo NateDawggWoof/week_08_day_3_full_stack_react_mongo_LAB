@@ -8,8 +8,8 @@ export const getBookings = () => {
 export const postBooking = (payload) => {
     return fetch(baseURL, {
         method: 'POST',
-        body:JSON.stringify(payload),
-        header: { 'Content-Type': 'application/json'}
+        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/json'}
     })
     .then(res => res.json())
 }
