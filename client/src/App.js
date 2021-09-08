@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './App.css';
-import {getBookings, deleteBooking as apiDeleteBooking} from "./BookingsService";
+import {getBookings, deleteBooking} from "./BookingsService";
 import BookingSystem from './containers/BookingSystem';
 
 
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className="App">
-    <BookingSystem getBookings ={getBookings}/>
+    <BookingSystem getBookings ={getBookings} deleteBooking={deleteBooking}/>
 
     </div>
   );

@@ -1,12 +1,15 @@
 import React from "react";
 
-const BookingDetails = () => {
+const BookingDetails = ({booking, removeBooking}) => {
 
 
 
     return (
         <div>
-            <h3>I'm the booking details</h3>
+            <h3>{booking._id}</h3>
+            <p>Guest Name: {booking.name}</p>
+            <p>Guest Email: {booking.email}</p>
+            <button onClick={()=>removeBooking(booking._id)}> 🗑 </button>
         </div>
     )
 }
